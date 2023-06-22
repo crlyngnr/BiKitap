@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_rect02"
+    android:backgroundTint="#D6D6D6"
+    android:padding="20dp">
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:padding="5dp"
+        android:src="@drawable/ic_back_white"
+        android:tint="@color/black" />
+    
+    <TextView
+        android:id="@+id/titleTv"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="5dp"
+        android:text="Yorum ekle"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/commentTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backBtn"
+        android:layout_marginTop="20dp"
+        android:hint="Yorum"
+        app:startIconDrawable="@drawable/comment_24">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:id="@+id/commentEt"
+        android:background="@drawable/shape_edittext01"
+        android:layout_height="wrap_content"
+        android:inputType="textCapSentences|textMultiLine"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commentTil"
+        android:layout_marginTop="20dp"
+        android:text="Gönder"
+        android:textColor="@color/white"
+        />
+</RelativeLayout>

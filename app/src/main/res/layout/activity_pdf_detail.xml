@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PdfDetailActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back_white"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="10dp">
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Kitap Detayı"
+            android:textColor="@color/white"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_above="@id/bookOptionsLl"
+        android:layout_below="@id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/pdfRl"
+                    android:layout_width="110dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/gray">
+
+                    <com.github.barteksc.pdfviewer.PDFView
+                        android:id="@+id/pdfView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </com.github.barteksc.pdfviewer.PDFView>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </ProgressBar>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/titleTv"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pdfRl"
+                    android:text="Kitap Başlığı">
+
+                </TextView>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTv"
+                    android:layout_toEndOf="@id/pdfRl">
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/categoryLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Kategori">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/categoryTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/A">
+
+                        </TextView>
+
+                    </TableRow>
+
+                    <TableRow
+
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/dateLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Tarih">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/dateTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/A">
+
+                        </TextView>
+
+                    </TableRow>
+
+                    <TableRow
+
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/sizeLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Boyut">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/sizeTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/A">
+
+                        </TextView>
+
+                    </TableRow>
+
+                    <TableRow
+
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/viewsLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Görüntülenme">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/viewsTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/A">
+
+                        </TextView>
+
+                    </TableRow>
+
+                    <TableRow
+
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/downloadsLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="İndirilme">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/downloadsTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/A">
+
+                        </TextView>
+
+                    </TableRow>
+
+                    <TableRow
+
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/pagesLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Sayfa Sayısı">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/pagesTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/A">
+
+                        </TextView>
+
+                    </TableRow>
+
+                </TableLayout>
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/descTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Kitabın Açıklaması"
+                android:textColor="@color/black">
+
+            </TextView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray2"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/commentsLabelTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Comments"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    />
+                <ImageButton
+                    android:id="@+id/addCommentBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/transparent"
+                    android:padding="5dp"
+                    android:src="@drawable/add_comment_24"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/commentsRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FBFBFBFB"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_comment"
+                    android:layout_below="@+id/addCommentBtn"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bookOptionsLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/readBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Okumaya Başla"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_book_white"
+            android:background="@color/design_default_color_primary">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/downloadBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/design_default_color_primary"
+            android:drawableTop="@drawable/ic_download_white"
+            android:text="Kitabı İndir">
+
+        </Button>
+
+        <Button
+            android:id="@+id/favoriteBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_favorite_white"
+            android:text="Favorilere Ekle"
+            android:background="@color/design_default_color_primary">
+
+        </Button>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "72476359512",
+    "project_id": "bookapp-e701e",
+    "storage_bucket": "bookapp-e701e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72476359512:android:95687ddd40443f5145c32d",
+        "android_client_info": {
+          "package_name": "com.doganarslan.bookapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72476359512-59aitv2l2jr2k5r3d3ae80aq718bl6v4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doganarslan.bookapplication",
+            "certificate_hash": "8899b8d96b8e01afd67a370c99a6ba7e6ad621e0"
+          }
+        },
+        {
+          "client_id": "72476359512-jdddb9ovuqsr9ikdqu69ogu0oq709mcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2wkPuWPn9Dgg0ay4qPz1rikkdHC2ZVC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72476359512-jdddb9ovuqsr9ikdqu69ogu0oq709mcf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
